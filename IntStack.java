@@ -5,16 +5,16 @@ public class IntStack {
         return top == null;
     }
 
-    public void push(int item) {
+    public void push(double item) {
         top = new Node(item, top);
     }
 
-    public int pop() {
+    public double pop() {
         if(isEmpty()) {
             throw new RuntimeException("stack is empty");
         }
 
-        int saved = top.item;
+        double saved = top.item;
         top = top.next;
         return saved;
     }
